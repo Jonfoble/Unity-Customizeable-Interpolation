@@ -50,3 +50,10 @@ Vector3.Lerp(Vector3 x, Vector3 y, Float t).
 With the implementation; 
 
 Interpolation.Interpolate(Vector3 x, Vector3 y, Float t, Bool linearlyInterpolate).
+
+## Any Example Use Case?
+
+There are countless possible use cases but as an instance;
+
+We could shoot a guided missile by spherically interpolating to a target destination
+and change it to linear interpolation in case of an encounter with an enemy and chase it linearly interpolating.
