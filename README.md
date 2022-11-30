@@ -33,7 +33,8 @@ The Calculation:
 System is allowing users to use Slerp() and Lerp() Vectors within a single method utilising a boolean.
 When dealing with Linear and Spherical Linear Interpolation, there are times when we need to turn
 Spherical Interpolation into Linear Interpolation. In order for users to achieve this within unity,
-they would need to create different Vectors both for Slerp and Lerp.
+they would need to create different Vectors both for Slerp and Lerp, which would effectively increase 
+the space complexity of the overall implementation.
 
 However, with this implementation, only thing that we will need is going to be a boolean variable which we can trigger in need.
 
