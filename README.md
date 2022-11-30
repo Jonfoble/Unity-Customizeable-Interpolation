@@ -33,7 +33,8 @@ The Calculation:
 System is allowing users to use Slerp() and Lerp() Vectors within a single method utilising a boolean.
 When dealing with Linear and Spherical Linear Interpolation, there are times when we need to turn
 Spherical Interpolation into Linear Interpolation. In order for users to achieve this within unity,
-They would need to create different Vectors both for Slerp and Lerp.
+they would need to create different Vectors both for Slerp and Lerp.
+
 However, with this implementation, only thing that we will need is going to be a boolean variable which we can trigger in need.
 
 ## How To Use?
@@ -42,6 +43,7 @@ Adding the Interpolate.cs into the project is enough. Afterwards, you are going 
 Standard Slerp and Lerp would take IE.;
 
 Vector3.Slerp(Vector3 x, Vector3 y, Float t).
+
 Vector3.Lerp(Vector3 x, Vector3 y, Float t).
 
 With the implementation; 
