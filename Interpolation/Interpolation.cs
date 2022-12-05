@@ -2,8 +2,10 @@ using UnityEngine;
 
 public static class Interpolation
 {
-    public static Vector3 Interpolate(Vector3 a, Vector3 b, float t, bool linearlyInterpolate = false)
-    {        
+    public static Vector3 Interpolate(Vector3 a, Vector3 b, float t, bool linear = false)
+    {
+        //Condition to Turn Spherical Linear Interpolation into Linear Interpolation
+        
         // Dot product - the cosine of the angle between 2 vectors.
             float dot = Vector3.Dot(a, b);
 
@@ -16,9 +18,9 @@ public static class Interpolation
             RelativeVec.Normalize();
 
         // The final result.
-        if (linearlyInterpolate)
+        if (linear)
 		{
-            Vector3 lerpedVector = a + (b - a) * Mathf.Sin(theta);
+            Vector3 lerpedVector = a + (b - a) * Mathf.Clamp01(t);
             return lerpedVector;
         }
 		else
