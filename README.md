@@ -12,7 +12,7 @@ For instance, Linear Interpolation between known two points is the straight line
 
 The Calculation:   ![1](https://user-images.githubusercontent.com/91648268/204702199-43f30240-8791-4993-92be-5b02c4aaf88d.png)
 
-Linear Interpolation of a data set (red dots are the data sets and the blue lines are linear interpolants:
+Linear Interpolation of a data set (red dots are the data sets and the blue lines are linear interpolants):
 
 ![3](https://user-images.githubusercontent.com/91648268/204703093-0aa949ed-7289-4259-9f58-6bb7abda3b3a.png)
 
