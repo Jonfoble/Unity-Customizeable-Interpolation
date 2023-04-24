@@ -4,28 +4,26 @@ public static class Interpolation
 {
     public static Vector3 Interpolate(Vector3 a, Vector3 b, float t, bool linear = false)
     {
-        //Condition to Turn Spherical Linear Interpolation into Linear Interpolation
-        
-        // Dot product - the cosine of the angle between 2 vectors.
+        if (linear)
+        {
+            return Vector3.Lerp(a, b, Mathf.Clamp01(t));
+        }
+        else
+        {
+            // Dot product - the cosine of the angle between 2 vectors.
             float dot = Vector3.Dot(a, b);
 
             // Clamp to be in the range of Acos() because its a floating value
-            Mathf.Clamp(dot, -1.0f, 1.0f);
+            dot = Mathf.Clamp(dot, -1.0f, 1.0f);
 
             // Acos(dot) returns the angle between a and b and multiplying that by t returns the angle between start and the final result.
             float theta = Mathf.Acos(dot) * t;
-            Vector3 RelativeVec = b - a * dot;
-            RelativeVec.Normalize();
 
-        // The final result.
-        if (linear)
-		{
-            Vector3 lerpedVector = a + (b - a) * Mathf.Clamp01(t);
-            return lerpedVector;
-        }
-		else
-		{
-            return ((a * Mathf.Cos(theta)) + (RelativeVec * Mathf.Sin(theta)));
+            // Calculate the relative vector and normalize it
+            Vector3 relativeVec = (b - a * dot).normalized;
+
+            // The final result using spherical linear interpolation (slerp)
+            return (a * Mathf.Cos(theta)) + (relativeVec * Mathf.Sin(theta));
         }
     }
 }
