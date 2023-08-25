@@ -7,7 +7,7 @@ public static class Interpolation
     private const float MaxDotProductValue = 1.0f;
 
     /// <summary>
-    /// Interpolates between two vectors either linearly or spherically based on the specified parameter.
+    /// Interpolates between two vectors either linearly or spherically based on the specified boolean parameter.
     /// </summary>
     /// <param name="a">Start vector.</param>
     /// <param name="b">End vector.</param>
