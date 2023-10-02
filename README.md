@@ -32,11 +32,19 @@ The Calculation:
 
 System is allowing users to use Slerp() and Lerp() Vectors within a single method utilising a boolean.
 When dealing with Linear and Spherical Linear Interpolation, there are times when we need to turn
-Spherical Interpolation into Linear Interpolation. In order for users to achieve this within unity,
+Spherical Interpolation into Linear Interpolation. In order for users to achieve this within code,
 they would need to create different Vectors both for Slerp and Lerp, which would effectively increase 
-the space complexity of the overall implementation.
+the space complexity of the overall implementation. However, with this implementation, only thing that we will need is going to be a boolean variable which we can trigger in need.
 
-However, with this implementation, only thing that we will need is going to be a boolean variable which we can trigger in need.
+Simplification: By allowing users to switch between Slerp and Lerp within a single method, it streamlines the process. Rather than having two separate calls in code and managing them separately, you just have one, which can be especially handy if you are often switching between the two or if different parts of the code require different interpolations.
+
+Efficiency: Reducing the need for creating multiple vector objects can save memory, particularly in situations where these interpolations are done frequently or with large sets of data.
+
+Flexibility: With just a boolean switch, developers can easily choose which interpolation they want to use without restructuring or rewriting parts of their code. This encourages experimentation and finding the best fit for a given situation.
+
+Use Cases: The example provided is just one of many. Interpolation is used in many aspects of game development, from animations, character movement, camera motion, transitioning between game states, and so on. Being able to quickly switch between linear and spherical interpolation is a valuable tool.
+
+Learning and Debugging: For beginners or even for debugging purposes, having the ability to quickly switch and visually see the difference between the two interpolations can be insightful.
 
 ## How To Use?
 Adding the Interpolate.cs into the project is enough. Afterwards, you are going to be able to reach out to the method by calling it.
