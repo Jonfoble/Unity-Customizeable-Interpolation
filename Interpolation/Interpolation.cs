@@ -14,7 +14,7 @@ public static class Interpolation
     /// <param name="t">Interpolation parameter.</param>
     /// <param name="linear">If set to <c>true</c>, use linear interpolation. Otherwise, use spherical interpolation.</param>
     /// <returns>Interpolated vector.</returns>
-    public static Vector3 Interpolate(Vector3 a, Vector3 b, float t, bool linear = false)
+    public static Vector3 INTERP(Vector3 a, Vector3 b, float t, bool linear = false)
     {
         return linear ? LinearInterpolate(a, b, t) : SphericalInterpolate(a, b, t);
     }
