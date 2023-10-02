@@ -57,7 +57,7 @@ Vector3.Lerp(Vector3 x, Vector3 y, Float t).
 
 With the implementation; 
 
-Interpolation.Interpolate(Vector3 x, Vector3 y, Float t, Bool linearlyInterpolate).
+Interpolation.INTERP(Vector3 x, Vector3 y, Float t, Bool linear).
 
 ## Any Example Use Case?
 
